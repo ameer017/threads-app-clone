@@ -6,3 +6,5 @@ initial homePage content:
 <Button mx={"auto"}>Visit profile page</Button>
 </Flex>
 </Link>
+3. create AuthPage.jsx and import inside app.jsx.. search for chakra ui form template... inside the console type document.designMode = "on" then copy - paste inside the signUpCard component
+install @chakra-ui/icons
