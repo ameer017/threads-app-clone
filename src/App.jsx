@@ -13,6 +13,7 @@ import ChatPage from "./pages/ChatPage";
 import { SettingsPage } from "./pages/SettingsPage";
 function App() {
 	const user = useRecoilValue(userAtom);
+	// console.log(user)
 	const { pathname } = useLocation();
 	return (
 		<Box position={"relative"} w='full'>

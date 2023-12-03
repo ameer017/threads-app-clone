@@ -23,3 +23,6 @@ configure the proxy to block cors errors ref="vite.config.js"
 signUpCard configuration.
 1. set up the signUpCard from top to bottom
 when we reach data.error goto userController... edit the error part to hold "error" instead of "message"
+2. create a userAtom inside atoms folder.. then add the following to App.jsx
+	const user = useRecoilValue(userAtom);
+
