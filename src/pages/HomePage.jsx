@@ -57,6 +57,8 @@ const HomePage = () => {
 				<SuggestedUsers />
 			</Box>
 		</Flex>
+
+
 	);
 };
 

@@ -1,1 +1,8 @@
-1. modify the vite.config.js file content
+1. modify the vite.config.js file content.
+2. app.jsx contains the homepage with path='/'
+initial homePage content:
+<Link to={"/markzukerberg"}>
+<Flex w={"full"} justifyContent={"center"}>
+<Button mx={"auto"}>Visit profile page</Button>
+</Flex>
+</Link>
