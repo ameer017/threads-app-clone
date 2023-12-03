@@ -15,3 +15,9 @@ initial homePage content:
 	Sign up
 </Link>
 do the same for the signUpCard.
+
+
+********************
+signUpCard configuration.
+1. configure  the proxy to block cors errors ref="vite.config.js"
+2. create the handleSignUp function, apply the onClick event feature to the button but
