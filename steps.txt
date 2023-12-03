@@ -7,4 +7,4 @@ initial homePage content:
 </Flex>
 </Link>
 3. create AuthPage.jsx and import inside app.jsx.. search for chakra ui form template... inside the console type document.designMode = "on" then copy - paste inside the signUpCard component
-install @chakra-ui/icons
+install @chakra-ui/icons.. make some changes to the colors bg & btn
