@@ -8,3 +8,4 @@ initial homePage content:
 </Link>
 3. create AuthPage.jsx and import inside app.jsx.. search for chakra ui form template... inside the console type document.designMode = "on" then copy - paste inside the signUpCard and loginCard component
 install @chakra-ui/icons.. make some changes to the colors bg & btn
+4. we want make use of global state element "recoil" (npm i recoil) to manage the state between signUp and login when clicked, meanwhile every state is an atom in recoil, we need to wrap RecoilRoot around browserRouter inside main.jsx
