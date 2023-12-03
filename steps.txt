@@ -1,4 +1,4 @@
-1. modify the vite.config.js file content.
+1. modify the vite.config.js file content. --change server to 3000 instead of 5173
 2. app.jsx contains the homepage with path='/'
 initial homePage content:
 <Link to={"/markzukerberg"}>
