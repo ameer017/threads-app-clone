@@ -26,3 +26,5 @@ when we reach data.error goto userController... edit the error part to hold "err
 2. create a userAtom inside atoms folder.. then add the following to App.jsx
 	const user = useRecoilValue(userAtom);
 3. LogoutButton... 
+
+stop at 04:01:00
