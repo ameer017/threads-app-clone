@@ -22,4 +22,4 @@ configure the proxy to block cors errors ref="vite.config.js"
 
 signUpCard configuration.
 1. set up the signUpCard from top to bottom
-goto userController... edit the error part to hold "error" instead of "message"
+when we reach data.error goto userController... edit the error part to hold "error" instead of "message"
