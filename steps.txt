@@ -18,6 +18,8 @@ do the same for the signUpCard.
 
 
 ********************
+configure the proxy to block cors errors ref="vite.config.js"
+
 signUpCard configuration.
-1. configure  the proxy to block cors errors ref="vite.config.js"
-2. create the handleSignUp function, apply the onClick event feature to the button but
+1. set up the signUpCard from top to bottom
+goto userController... edit the error part to hold "error" instead of "message"
