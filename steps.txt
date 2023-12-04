@@ -18,7 +18,7 @@ do the same for the signUpCard.
 
 
 ********************
-configure the proxy to block cors errors ref="vite.config.js"
+configure the proxy to block cors errors ref = "vite.config.js"
 
 signUpCard configuration.
 1. set up the signUpCard from top to bottom
