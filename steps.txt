@@ -32,3 +32,4 @@ stop at 04:01:00
 
 ************* 05:03:00
 1. create the CreatePost component with just the add button... then import into app.jsx to confirm.
+2. Visit chakra-ui
