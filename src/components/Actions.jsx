@@ -39,8 +39,8 @@ const Actions = ({ post }) => {
         "You must be logged in to like a post",
         "error"
       );
-    if (isLiking) return;
-    setIsLiking(true);
+    if (isLiking) return;  // will be added lastly during optimization
+    setIsLiking(true); // will be added lastly during optimization
     try {
       const res = await fetch("/api/posts/like/" + post._id, {
         method: "PUT",
