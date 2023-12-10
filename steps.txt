@@ -48,6 +48,7 @@ and cut, paste it below the last svg inside Actions component.
 
 
 functions to like and reply looks like this until the last optimization
+
 const handleLikeAndUnlike = async () => {
     if (!user)
       return showToast(
