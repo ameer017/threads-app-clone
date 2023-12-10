@@ -110,7 +110,7 @@ const Actions = ({ post }) => {
       setPosts(updatedPosts);
       showToast("Success", "Reply posted successfully", "success");
       onClose();
-      setReply("");
+      setReply(""); // to be added during optimization process 
     } catch (error) {
       showToast("Error", error.message, "error");
     } finally {
