@@ -27,10 +27,10 @@ const Actions = ({ post }) => {
   const [posts, setPosts] = useRecoilState(postsAtom);
   const [isLiking, setIsLiking] = useState(false);
   const [isReplying, setIsReplying] = useState(false);
-  const [reply, setReply] = useState("");
+  const [reply, setReply] = useState(""); //delayed till reply function
 
   const showToast = useShowToast();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure(); //modal for reply
 
   const handleLikeAndUnlike = async () => {
     if (!user)
