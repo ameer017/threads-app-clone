@@ -47,7 +47,7 @@ and cut, paste it below the last svg inside Actions component.
 4. Go to Chakra ui, search for modal and pick focus on specific element, copy the modal code and manipulate to fit.
 
 
-
+functions to like and reply looks like this until the last optimization
 const handleLikeAndUnlike = async () => {
     if (!user)
       return showToast(
