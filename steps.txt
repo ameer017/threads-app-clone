@@ -72,22 +72,11 @@ const handleLikeAndUnlike = async () => {
 
       if (!liked) {
         // add the id of the current user to post.likes array
-        const updatedPosts = posts.map((p) => {
-          if (p._id === post._id) {
-            return { ...p, likes: [...p.likes, user._id] };
-          }
-          return p;
-        });
-        setPosts(updatedPosts);
+        
+        setPost({...post, likes: [...post.likes, user._id]});
       } else {
         // remove the id of the current user from post.likes array
-        const updatedPosts = posts.map((p) => {
-          if (p._id === post._id) {
-            return { ...p, likes: p.likes.filter((id) => id !== user._id) };
-          }
-          return p;
-        });
-        setPosts(updatedPosts);
+        setPosts({ ...post, likes: post.likes.filter((id) => id !== user._id) });
       }
 
       setLiked(!liked);
