@@ -10,12 +10,11 @@ initial homePage content:
 (npm install @chakra-ui/icons).. make some changes to the colors bg & btn
 4. we want make use of global state element "recoil" (npm i recoil) to manage the state between signUp and login when clicked, meanwhile every state is an atom in recoil, we need to wrap RecoilRoot around browserRouter inside main.jsx
 5. add this to the loginCard so that when sign up is clicked, it will change the state and load the sign up page :
-	const setAuthScreen = useSetRecoilState(authScreenAtom);
+	const setAuthScreen = useSetRecoilState(authScreenAtom)                                                                                                                                                                                   ;
 <Link color={"blue.400"} onClick={() => setAuthScreen("signup")}>
 	Sign up
 </Link>
 do the same for the signUpCard.
-
 
 ********************
 configure the proxy to block cors errors ref = "vite.config.js"
@@ -24,12 +23,27 @@ signUpCard configuration.
 1. set up the signUpCard from top to bottom
 when we reach data.error goto userController... edit the error part to hold "error" instead of "message", while doing this - create hooks folder and set up useShowToast.js
 2. create a userAtom inside atoms folder.. then add the following to App.jsx
-	const user = useRecoilValue(userAtom);
-3. LogoutButton... 
+	const user = useRecoilValue(userAtom)                                                                                                                                      ;
+3. LogoutButton...
 
 stop at 04:01:00
 
+************* 05:57:57 __Like/unLike post
+Post component optimization to like and unlike by passing post as a prop from the Actions component, delete the like & setLike state, highlight the last Flex element :
+<Flex gap={2} alignItems={"center"}>
+	<Text color={"gray.light"} fontSize='sm'>
+		{post.replies.length} replies
+	</Text>
+	<Box w={0.5} h={0.5} borderRadius={"full"} bg={"gray.light"}></Box>
+	<Text color={"gray.light"} fontSize='sm'>
+		{post.likes.length} likes
+	</Text>
+</Flex>
+and cut, paste it below the last svg inside Actions component.
 
-************* 05:03:00
-1. create the CreatePost component with just the add button... then import into app.jsx to confirm.
-2. Visit chakra-ui
+1. Wrap a flexDirection = "column" Flex element around the svgs..
+2. Change the backend request method for like__reply to 'PUT", this is to indicate that we're updating a post.
+3. Cut the repost znd share svg from the others and create a component for it individually.
+4. Go to Chakra ui, search for modal and pick focus on specific element, copy the modal code and manipulate to fit.
+
+stop at 06:16:36
