@@ -57,9 +57,6 @@ const handleLikeAndUnlike = async () => {
         "error"
       );
 
-	  
-    if (isLiking) return;
-    setIsLiking(true);
     try {
       const res = await fetch("/api/posts/like/" + post._id, {
         method: "PUT",
@@ -86,8 +83,6 @@ const handleLikeAndUnlike = async () => {
     
 	  showToast("Error", error.message, "error");
     
-	} finally {
-      setIsLiking(false);
     }
   };
 
@@ -98,8 +93,6 @@ const handleLikeAndUnlike = async () => {
         "You must be logged in to reply to a post",
         "error"
       );
-    if (isReplying) return;
-    setIsReplying(true);
     try {
       const res = await fetch("/api/posts/reply/" + post._id, {
         method: "PUT",
@@ -111,20 +104,12 @@ const handleLikeAndUnlike = async () => {
       const data = await res.json();
       if (data.error) return showToast("Error", data.error, "error");
 
-      const updatedPosts = posts.map((p) => {
-        if (p._id === post._id) {
-          return { ...p, replies: [...p.replies, data] };
-        }
-        return p;
-      });
-      setPosts(updatedPosts);
+      setPosts({ ...p, replies: [...p.replies, data] });
+
       showToast("Success", "Reply posted successfully", "success");
       onClose();
-      setReply("");
     } catch (error) {
       showToast("Error", error.message, "error");
-    } finally {
-      setIsReplying(false);
     }
   };
 
