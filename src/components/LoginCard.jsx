@@ -35,7 +35,7 @@ export default function LoginCard() {
 		setLoading(true);
 		try {
 			const res = await fetch("/api/users/login", {
-				method: "post",
+				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
 				},
